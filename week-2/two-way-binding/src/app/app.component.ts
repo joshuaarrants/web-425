@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   <div class = "container-fluid two-way-form">
     <h2>Two-Way Binding Example</h2>
     <div class = "form-group">
-      <input class = "form-control" type = "text" placeholder = "Enter your favoriate brand..."/>
+      <input class = "form-control" type = "text" placeholder = "Enter your favoriate brand..." [(ngModel)] = "brand"/>
       <br />
       <button class="btn btn-primary form-control" (click)="brand=''">Clear Brand</button>
     </div>
