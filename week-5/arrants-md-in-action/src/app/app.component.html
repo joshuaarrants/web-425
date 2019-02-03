@@ -1,0 +1,30 @@
+<mat-toolbar class="menu" role="header" color="primary">
+    <mat-toolbar-row>
+      <button mat-button class="toolbar__icon-button mat-button">
+        <mat-icon>web</mat-icon>
+        <span style="margin-left: 5px !important;">WEB 425</span>
+      </button>
+      <button mat-button class="toolbar__icon-button mat-button" [routerLink]="['/home']">
+        <mat-icon>home</mat-icon>
+        <span style="margin-left: 5px !important;">Home</span>
+      </button>
+  
+      <div fxFlex></div>
+      
+      <button mat-button class="toolbar__icon-button mat-button" [routerLink]="['/login']">
+        <mat-icon>account_circle</mat-icon>
+        <span style="margin-left: 5px !important;">Login</span>
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  
+  <div fxLayout="row" class="parent">
+    <div fxFlex=25 class="left">
+    
+    </div>
+    
+    <div fxFlex=75 class="right">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  
