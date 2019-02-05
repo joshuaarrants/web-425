@@ -1,0 +1,14 @@
+.container {
+    height: calc(100vh - 64px);
+}
+.sidenav {
+    width: 20%;
+    background-color: lightgray;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
