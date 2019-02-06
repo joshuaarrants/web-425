@@ -1,0 +1,23 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<mat-toolbar class="menu" role="header" color="primary">
+  <mat-toolbar-row>
+    <button mat-button class="toolbar__icon-button mat-button">
+      <mat-icon>web</mat-icon>
+      <span style="margin-left: 7px;">WEB 425</span>
+    </button>
+    <button class="mat-button">
+      About
+    </button>
+    <button class="mat-button">
+      Contact Us
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container class="container">
+  <mat-sidenav mode="side" opened class="sidenav"></mat-sidenav>
+  <mat-sidenav-content class="main-content">
+    <h1>AppComponent recieved: {{ priceQuote?.stockSymbol }} {{ priceQuote?.lastPrice | currency: 'USD'}}</h1>
+    <app-price-quote (lastPrice) = "piceQuoteHanndler($event)"></app-price-quote>
+  </mat-sidenav-content>
+</mat-sidenav-container>
