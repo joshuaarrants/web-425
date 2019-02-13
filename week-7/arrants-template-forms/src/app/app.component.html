@@ -1,0 +1,54 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<mat-toolbar role="header" color="primary">
+  <mat-toolbar-row>
+    <button mat-button>
+      <mat-icon>web</mat-icon>
+      <span style="margin-left: 7px;">WEB 425</span>
+    </button>
+    <button mat-button>
+      About
+    </button>
+    <button mat-button>
+      Contact Us
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container class="container">
+  <mat-sidenav mode="side" opened class="sidenav"></mat-sidenav>
+  <mat-sidenav-content class="sidenav-main-content">
+
+    <mat-card>
+        
+      <mat-card-title>Form Login</mat-card-title>
+
+      <mat-card-content>
+      
+        <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+        
+          <mat-form-field>
+            <input matInput placeholder="Username" ngModel name="username" type="text" />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="SSN" ngModel name="ssn" type="text" />
+          </mat-form-field>
+
+          <div ngModelGroup="passwordsGroup">
+            <mat-form-field>
+              <input matInput placeholder="Password" name="password" ngModel type="password" />
+            </mat-form-field>
+
+            <mat-form-field>
+              <input matInput placeholder="Confirm Password" name="pconfirm" ngModel type="password" />
+            </mat-form-field>
+          </div>
+
+          <mat-card-actions class="mat-card-actions">
+            <button mat-button color="primary" type="submit">Submit</button>
+          </mat-card-actions>
+        </form>
+      </mat-card-content>      
+    </mat-card>
+  </mat-sidenav-content>
+</mat-sidenav-container>
